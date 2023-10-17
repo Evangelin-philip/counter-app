@@ -37,9 +37,9 @@ function Counter() {
             <button className='btn btn-danger' onClick={()=>dispatch(reset())}>Reset</button>
             <button className='btn btn-success' onClick={()=>dispatch(increment())}>Increment</button>
         </div>
-        <div className='d-flex mt-5 justify-content-between'>
-            <input type="text" className="form-control" placeholder='Enter the amount' onChange={(e)=>{setAmount(e.target.value)}}></input>
-            <button onClick={handle_incrmnt_by_amount} className='btn btn-primary'>Increment</button>
+        <div className='d-flex mt-5 justify-content-around w-100'>
+            <input type="text" className="form-control" style={{width:"30%"}} placeholder='Amount' onChange={(e)=>{setAmount(e.target.value)}}></input>
+            <button onClick={handle_incrmnt_by_amount} className='btn btn-primary'>Increment By Amount</button>
         </div>
       </div>
     </div>
