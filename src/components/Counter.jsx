@@ -25,6 +25,7 @@ function Counter() {
             // updating state in store
             // increment_by_amount() from slice
             dispatch(increment_by_amount(Number(amount)))
+            setAmount("")
         }
     }
 
@@ -38,7 +39,7 @@ function Counter() {
             <button className='btn btn-success' onClick={()=>dispatch(increment())}>Increment</button>
         </div>
         <div className='d-flex mt-5'>
-            <input type="text" className="form-control"  placeholder='Enter The Amount!' onChange={(e)=>{setAmount(e.target.value)}}></input>
+            <input type="text" className="form-control"  value={amount} placeholder='Enter The Amount!' onChange={(e)=>{setAmount(e.target.value)}}></input>
             <button onClick={handle_incrmnt_by_amount} className='btn btn-primary ms-3'>Increment By Amount</button>
         </div>
       </div>
